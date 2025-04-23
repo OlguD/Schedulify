@@ -1,25 +1,46 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Plus, Calendar } from "lucide-react";
 import api from "../lib/api.js";
+import { SchedulePostPopup } from "../components/popups/SchedulePostPopup.jsx";
 
 export default function Schedule() {
   const [scheduledContents, setScheduledContents] = useState([]);
+  const [isSchedulePopupOpen, setIsSchedulePopupOpen] = useState(false);
 
-  const getScheduledContents = () => {
-    setScheduledContents(api("get", "api/contents/"));
+  const getScheduledContents = async () => {
+    try {
+      const response = await api("get", "/contents");
+      setScheduledContents(response);
+    } catch (error) {
+      console.error("Error fetching scheduled contents:", error);
+    }
   };
 
-  const scheduleContent = () => {
-    api("post", "/api/content/create/");
+  useEffect(() => {
+    getScheduledContents();
+  }, []);
+
+  const handleScheduleSubmit = async (scheduleData) => {
+    try {
+      await api("post", "/content/schedule", scheduleData);
+
+      getScheduledContents();
+      setIsSchedulePopupOpen(false);
+    } catch (error) {
+      console.error("Error scheduling content:", error);
+    }
   };
 
   return (
     <div className="space-y-6">
       <div className="flex justify-between items-center">
         <h2 className="text-3xl font-bold tracking-tight">Content Schedule</h2>
-        <Button onClick={scheduleContent}>
+        <Button
+          className="hover:cursor-pointer"
+          onClick={() => setIsSchedulePopupOpen(true)}
+        >
           <Plus className="mr-2 h-4 w-4" /> Schedule Post
         </Button>
       </div>
@@ -50,6 +71,12 @@ export default function Schedule() {
           </div>
         </Card>
       </div>
+
+      <SchedulePostPopup
+        isOpen={isSchedulePopupOpen}
+        onClose={() => setIsSchedulePopupOpen(false)}
+        onSubmit={handleScheduleSubmit}
+      />
     </div>
   );
 }

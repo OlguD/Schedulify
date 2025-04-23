@@ -1,9 +1,12 @@
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Plus, Users, Calendar, CheckCircle, BarChart2 } from "lucide-react";
-import { Popup } from "../components/Popup";
+import { PostPopup } from "../components/popups/PostPopup";
+import { useState } from "react";
 
 export default function Dashboard() {
+  const [isPostPopupOpen, setIsPostPopupOpen] = useState(false);
+
   return (
     <div className="space-y-8">
       {/* Header */}
@@ -15,10 +18,19 @@ export default function Dashboard() {
           </p>
         </div>
 
-        <Button size="lg">
+        <Button
+          size="lg"
+          className="hover:cursor-pointer"
+          onClick={() => setIsPostPopupOpen(true)}
+        >
           <Plus className="mr-2 h-5 w-5" /> Create New Post
         </Button>
       </div>
+
+      <PostPopup
+        isOpen={isPostPopupOpen}
+        onClose={() => setIsPostPopupOpen(false)}
+      />
 
       {/* Stats Cards */}
       <div className="grid gap-6 grid-cols-1 md:grid-cols-2 lg:grid-cols-4">
@@ -90,7 +102,7 @@ export default function Dashboard() {
         <Card className="p-6">
           <div className="flex items-center justify-between mb-6">
             <h3 className="text-lg font-semibold">Recent Posts</h3>
-            <Button variant="ghost" size="sm">
+            <Button variant="ghost" size="sm" className="hover:cursor-pointer">
               View All
             </Button>
           </div>
@@ -115,7 +127,7 @@ export default function Dashboard() {
         <Card className="p-6">
           <div className="flex items-center justify-between mb-6">
             <h3 className="text-lg font-semibold">Upcoming Schedule</h3>
-            <Button variant="ghost" size="sm">
+            <Button variant="ghost" size="sm" className="hover:cursor-pointer">
               View Calendar
             </Button>
           </div>

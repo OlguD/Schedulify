@@ -28,7 +28,7 @@ export default function Settings() {
               <Input id="email" type="email" defaultValue="john@example.com" />
             </div>
           </div>
-          <Button className="mt-4">Save Changes</Button>
+          <Button className="mt-4 hover:cursor-pointer">Save Changes</Button>
         </Card>
 
         <Card className="p-6">
@@ -61,7 +61,9 @@ export default function Settings() {
               </Select>
             </div>
           </div>
-          <Button className="mt-4">Save Preferences</Button>
+          <Button className="mt-4 hover:cursor-pointer">
+            Save Preferences
+          </Button>
         </Card>
 
         <Card className="p-6">
