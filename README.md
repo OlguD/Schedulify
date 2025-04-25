@@ -42,18 +42,33 @@ Schedulify is a comprehensive social media content management platform that help
 </details>
 
 <details>
-  <summary><strong>Light Mode</strong> (Click to expand)</summary>
+<summary><strong>Dark Mode</strong> (Click to expand)</summary>
+<div align="center">
 
-  <div align="center">
-    <p><strong>Dashboard - Light Mode</strong></p>
-    <img src="assets/Dashboard.png" alt="Dashboard Light Mode" width="800"/>
+**Dashboard - Dark Mode**
+![Dashboard Dark Mode](assets/DashboardDark.png)
 
-    <p><strong>My Accounts - Light Mode</strong></p>
-    <img src="assets/MyAccountsPage.png" alt="My Accounts Light Mode" width="800"/>
+**Accounts Page - Dark Mode**
+![Accounts Page Dark Mode](assets/AccountsPageDark.png)
 
-    <p><strong>Analytics Page - Light Mode</strong></p>
-    <img src="assets/AnalyticsPage.png" alt="Analytics Page Light Mode" width="800"/>
-  </div>
+**Analytics - Dark Mode**
+![Analytics Dark Mode](assets/AnalyticsDark.png)
+</div>
+</details>
+
+<details>
+<summary><strong>Light Mode</strong> (Click to expand)</summary>
+<div align="center">
+
+**Dashboard - Light Mode**
+![Dashboard Light Mode](assets/Dashboard.png)
+
+**My Accounts - Light Mode**
+![My Accounts Light Mode](assets/MyAccountsPage.png)
+
+**Analytics Page - Light Mode**
+![Analytics Page Light Mode](assets/AnalyticsPage.png)
+</div>
 </details>
 
 ## 🎯 Roadmap
