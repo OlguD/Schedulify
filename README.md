@@ -26,29 +26,35 @@ Schedulify is a comprehensive social media content management platform that help
 
 ## 📸 Screenshots
 
-### Dark Mode
-<div align="center">
-  <p><strong>Dashboard - Dark Mode</strong></p>
-  <img src="assets/DashboardDark.png" alt="Dashboard Dark Mode" width="800"/>
+<details>
+  <summary><strong>Dark Mode</strong> (Click to expand)</summary>
 
-  <p><strong>Accounts Page - Dark Mode</strong></p>
-  <img src="assets/AccountsPageDark.png" alt="Accounts Page Dark Mode" width="800"/>
+  <div align="center">
+    <p><strong>Dashboard - Dark Mode</strong></p>
+    <img src="assets/DashboardDark.png" alt="Dashboard Dark Mode" width="800"/>
 
-  <p><strong>Analytics - Dark Mode</strong></p>
-  <img src="assets/AnalyticsDark.png" alt="Analytics Dark Mode" width="800"/>
-</div>
+    <p><strong>Accounts Page - Dark Mode</strong></p>
+    <img src="assets/AccountsPageDark.png" alt="Accounts Page Dark Mode" width="800"/>
 
-### Light Mode
-<div align="center">
-  <p><strong>Dashboard - Light Mode</strong></p>
-  <img src="assets/Dashboard.png" alt="Dashboard Light Mode" width="800"/>
+    <p><strong>Analytics - Dark Mode</strong></p>
+    <img src="assets/AnalyticsDark.png" alt="Analytics Dark Mode" width="800"/>
+  </div>
+</details>
 
-  <p><strong>My Accounts - Light Mode</strong></p>
-  <img src="assets/MyAccounts.png" alt="My Accounts Light Mode" width="800"/>
+<details>
+  <summary><strong>Light Mode</strong> (Click to expand)</summary>
 
-  <p><strong>Analytics Page - Light Mode</strong></p>
-  <img src="assets/AnalyticsPage.png" alt="Analytics Page Light Mode" width="800"/>
-</div>
+  <div align="center">
+    <p><strong>Dashboard - Light Mode</strong></p>
+    <img src="assets/Dashboard.png" alt="Dashboard Light Mode" width="800"/>
+
+    <p><strong>My Accounts - Light Mode</strong></p>
+    <img src="assets/MyAccountsPage.png" alt="My Accounts Light Mode" width="800"/>
+
+    <p><strong>Analytics Page - Light Mode</strong></p>
+    <img src="assets/AnalyticsPage.png" alt="Analytics Page Light Mode" width="800"/>
+  </div>
+</details>
 
 ## 🎯 Roadmap
 - [ ] Integration with social media platforms
